@@ -1,4 +1,3 @@
-/* Existing styles */
 body {
   font-family: "Arial", sans-serif;
   background-color: #f4f4f9;
@@ -72,7 +71,6 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -116,13 +114,11 @@ button:hover {
   display: none;
 }
 
-/* Add this new class */
 .completed span {
   text-decoration: line-through;
   color: #888;
 }
 
-/* Animation for task removal */
 li.removing {
   opacity: 0;
   transform: translateX(100%);

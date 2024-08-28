@@ -61,10 +61,8 @@ function addTask(text, completed) {
   li.appendChild(taskText);
   li.appendChild(removeButton);
 
-  // Insert the new task at the top of the list
   taskList.insertBefore(li, taskList.firstChild);
 
-  // Delay adding the visible class to trigger the animation
   setTimeout(() => li.classList.add("visible"), 10);
 }
 
