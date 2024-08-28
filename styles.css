@@ -1,3 +1,4 @@
+/* Existing styles */
 body {
   font-family: "Arial", sans-serif;
   background-color: #f4f4f9;
@@ -71,6 +72,8 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 li {
@@ -82,6 +85,14 @@ li {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+li.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 button {
@@ -103,4 +114,17 @@ button:hover {
   color: #777;
   font-size: 18px;
   display: none;
+}
+
+/* Add this new class */
+.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Animation for task removal */
+li.removing {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
