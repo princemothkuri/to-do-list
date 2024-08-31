@@ -242,3 +242,19 @@ li.removing {
   transform: translateX(100%);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+/* Responsive Design */
+
+/* For Mobile Devices */
+@media (max-width: 767px) {
+  .container {
+    width: 300px;
+  }
+}
+
+/* For Tablet Devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 350px;
+  }
+}
